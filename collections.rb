@@ -3,10 +3,7 @@ en = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 fr = ['un','deux','trois','quatre','cinq','six','sept','huit','neuf']
 
 # key = digits
-#
 # value = ['en', 'fr']
-
-#
 # hash = Hash.new(key,value).each do |k,v|
 
 # hash = { '1' => 'one'}
@@ -22,7 +19,8 @@ fr = ['un','deux','trois','quatre','cinq','six','sept','huit','neuf']
 hash = {}
 
 (0..8).each do |i|
-  hash[digits[i]]=en[i],fr[i]
+  hash[digits[i]]={'english': en[i], 'french': fr[i]}
 end
 
-puts hash
+
+pp hash
